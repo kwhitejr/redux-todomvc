@@ -1,5 +1,5 @@
 import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import classNames from 'classnames';
 
 import TextInput from './TextInput';
@@ -28,7 +28,10 @@ export default React.createClass({
         <button className="destroy"
                 onClick={() => this.props.deleteItem(this.props.id)}></button>
       </div>
-      <TextInput />
+      <TextInput text={this.props.text}
+                 itemId={this.props.id}
+                 cancelEditing={this.props.cancelEditing}
+                 doneEditing={this.props.doneEditing} />
     </li>
   }
 });
